@@ -1,0 +1,18 @@
+eclipse {
+	project {
+    	name = "jax-rs.hellors"
+	}
+}
+
+dependencies {
+   compile 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.13'
+}
+
+
+task server(type: JavaExec) {
+	standardInput 	= System.in  
+    group 			= 'Hello World Service'
+    description 	= 'Start a REST endpoint'
+    main 			= 'rest.hellows.Server'
+	classpath 		= sourceSets.main.runtimeClasspath
+}

@@ -1,0 +1,18 @@
+eclipse {
+	project {
+    	name = "jax-rs.hellors-cli"
+	}
+}
+
+dependencies {
+   compile 'org.glassfish.jersey.core:jersey-client:2.13'
+}
+
+
+task client(type: JavaExec) {
+    group 			= 'Hello World Client'
+    description 	= 'Consume a REST endpoint'
+    main 			= 'rest.hellows.Client'
+	classpath 		= sourceSets.main.runtimeClasspath
+}
+
